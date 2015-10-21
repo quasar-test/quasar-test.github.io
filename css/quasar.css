@@ -1132,43 +1132,87 @@ body {
   /* 20px padding + 1px border */
   margin-bottom: 20px;
   margin-left: -20px;
+  list-style-type: none;
 }
 .nav-sidebar > li > a {
+  color: black;
+  font-family: "Proxima Nova Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
   padding-right: 20px;
   padding-left: 20px;
 }
-.nav-sidebar > .active > a,
+.nav-sidebar > li > .active > a,
+.nav-sidebar > .active,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
-  color: #fff;
-  background-color: #428bca;
+  font-weight: bold;
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 /*
- * Main content
+ * Doc Main content
  */
-.main {
+.doc_main_content {
   padding: 20px;
 }
+.doc_main_content > p > a {
+  color: black;
+}
+.doc_main_content > .page-header,
+.doc_main_content > h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Proxima Nova Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #494949;
+}
+.doc_main_content > p {
+  font-family: "Proxima Nova Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #494949;
+  font-size: 15px;
+}
 @media (min-width: 768px) {
-  .main {
+  .doc_main_content {
     padding-right: 40px;
     padding-left: 40px;
   }
 }
-/*
- * Placeholder dashboard ideas
- */
-.placeholders {
-  margin-bottom: 30px;
-  text-align: center;
+.code-snippet {
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+  height: auto;
+  max-width: 500px;
+  font-size: 15px;
+  overflow: auto;
+  color: white;
+  background-color: black;
 }
-.placeholders h4 {
-  margin-bottom: 0;
+.code-snippet > hr {
+  border-top-color: rgba(207, 207, 207, 0.2);
 }
-.placeholder {
-  margin-bottom: 20px;
+.code-snippet .container {
+  max-width: 100%;
 }
-.placeholder img {
-  display: inline-block;
-  border-radius: 50%;
+@media screen and (min-width: 768px) {
+  .code-snippet {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .container .code-snippet,
+  .container-fluid .code-snippet {
+    padding-left: 8.5px;
+    padding-right: 8.5px;
+  }
+}
+.alert {
+  max-width: 500px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 5px solid #b37f13;
+  border-right: 1px solid transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-radius: 0px;
 }

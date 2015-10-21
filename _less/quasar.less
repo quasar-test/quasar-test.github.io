@@ -331,7 +331,7 @@ header {
 				margin-bottom: 10px;
 			}
             .intro-heading-light {
-            .pn_light-font;
+            .pn_light-font();
             font-size: 23px;
             margin-bottom: 25px;
         }
@@ -1128,52 +1128,114 @@ body {
   margin-right: -21px; /* 20px padding + 1px border */
   margin-bottom: 20px;
   margin-left: -20px;
+  list-style-type: none;
+
 }
 .nav-sidebar > li > a {
-  padding-right: 20px;
-  padding-left: 20px;
+    color: black;
+    .pn_light-font();
+
+    font-size: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
-.nav-sidebar > .active > a,
+.nav-sidebar > li > .active > a,
+.nav-sidebar > .active,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
-  color: #fff;
-  background-color: #428bca;
+    font-weight: bold;
+    .pn_semibold-font() !important;
 }
 
 
 /*
- * Main content
+ * Doc Main content
  */
 
-.main {
+.doc_main_content {
   padding: 20px;
 }
 
+.doc_main_content > p > a{
+    color: black;
+}
+
+.doc_main_content > .page-header, 
+.doc_main_content > h1,h2,h3,h4,h5,h6 {
+    .pn_semibold-font();
+    color: @doc-default-color;
+}
+
+.doc_main_content > p {
+    .pn_light-font();
+    color: @doc-default-color;
+    font-size: 15px;
+}
+
 @media (min-width: 768px) {
-  .main {
+  .doc_main_content {
     padding-right: 40px;
     padding-left: 40px;
   }
 }
 
+//
+// Code Snippet
+// --------------------------------------------------
 
 
-/*
- * Placeholder dashboard ideas
- */
+.code-snippet {
+  border-radius: 10px;
+  padding: @code-snippet-padding;
+  margin: @jumbotron-margin;
+  height: auto;
+  max-width: @code-snippet-max-width;
+  font-size: @code-snippet-font-size;
+  overflow: auto;
 
-.placeholders {
-  margin-bottom: 30px;
-  text-align: center;
+  color: @code-snippet-color;
+  background-color: @code-snippet-bg;
+
+
+  > hr {
+    border-top-color: darken(@jumbotron-bg, 10%);
+  }
+
+  .container &,
+  .container-fluid & {
+    //border-radius: @border-radius-large; Only round corners at higher resolutions if contained in a container
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: @screen-sm-min) {
+    padding-top:    (@code-snippet-padding * 1.6);
+    padding-bottom: (@code-snippet-padding * 1.6);
+
+    .container &,
+    .container-fluid & {
+      padding-left:  (@code-snippet-padding * 1.7);
+      padding-right: (@code-snippet-padding * 1.7);
+    }
+  }
 }
-.placeholders h4 {
-  margin-bottom: 0;
+
+//
+//Sensitive Data
+//
+
+.alert {
+  max-width: @code-snippet-max-width;
+  padding: @alert-padding;
+  margin-bottom: 15px;
+  border-left: 5px solid @alert-warning-border;
+  border-right: 1px solid transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-radius: @alert-border-radius;
+  
 }
-.placeholder {
-  margin-bottom: 20px;
-}
-.placeholder img {
-  display: inline-block;
-  border-radius: 50%;
-}
+
 

@@ -4,10 +4,10 @@ layout: default
 
 <div class="container-fluid">
   <div class="row">
-    {% include docs_sidebar_nav.html nav=site.data.docs %}
+    {% include doc_sidebar_nav.html nav=site.data.docs %}
 
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main "> 
-      <h1 class="page-header">Installation</h1>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 doc_main_content "> 
+      <h1 class="page-header">{{page.title}}</h1>
       
       {{content}}
 
