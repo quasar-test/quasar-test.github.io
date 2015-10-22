@@ -3,3 +3,7 @@ _site/
 pkg/
 test/
 .sass-cache/
+prepros.cfg
+ruby-install-0.5.0/
+ruby-install-0.5.0.tar.gz
+
