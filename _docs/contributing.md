@@ -18,10 +18,7 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr
     squared = []
     for i in items:
         squared.append(i**2)
-            for i in items:
-                squared.append(i**2)
-                    for i in items:
-                        squared.append(i**2)
+          
 </pre>
 
 <div class="alert alert-warning">
