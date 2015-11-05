@@ -4,9 +4,10 @@ function Commit(data) {
     var self = this;
     self.authorUrl = ko.observable(data.author.html_url);
     self.authorAvatar = ko.observable(data.author.avatar_url);
-    self.message = ko.observable(data.commit.message);
+    self.message = ko.observable((data.commit.message).substring(0,180)+"...");
+    self.commitUrl = ko.observable(data.html_url);
     self.date = ko.observable(moment(data.commit.committer.date).fromNow());
-    self.sha = ko.observable(data.commit.message);
+    self.sha = ko.observable(data.sha);
 }
 
 //ViewModel for the commit

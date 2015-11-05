@@ -193,23 +193,25 @@ layout: default
                     <div  data-bind="foreach: commitList">
                     <div class="panel panel-default" >
                         <div class="panel-body">
-                            <div class="col-md-1">
-                                <div class="media">
-                                  <div class="media-left">
-                                    <a data-bind="attr: {href:authorUrl}">
-                                      <img height="45px" width="45px" class="media-object" data-bind="attr: {src:authorAvatar}" alt="Commit Author Avatar">
-                                    </a>
-                                  </div>
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <div class="media">
+                                      <div class="media-left">
+                                        <a data-bind="attr: {href:authorUrl}">
+                                          <img height="45px" width="45px" class="media-object" data-bind="attr: {src:authorAvatar}" alt="Commit Author Avatar">
+                                        </a>
+                                      </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6">
-                                <p class="commit-text" data-bind="text: message"></p>
-                            </div>
-                            <div class="col-md-3">
-                                <p class="commit-text" data-bind="text: sha"></p>
-                            </div>
-                            <div class="col-md-2">
-                                <p class="commit-text" data-bind="text: date"></p>
+                                <div class="col-md-6">
+                                    <a data-bind="attr: {href:commitUrl}"><p class="commit-text" data-bind="text: message"></p></a>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="commit-text" data-bind="text: sha"></p>
+                                </div>
+                                <div class="col-md-2">
+                                    <p class="commit-text" data-bind="text: date"></p>
+                                </div>
                             </div>
                         </div>
                     </div>
