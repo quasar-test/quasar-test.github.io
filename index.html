@@ -42,18 +42,18 @@ layout: default
                         </a>
                     </div>
                     <div class="col-md-2 col-sm-6">
-                        <a href="http://spark.apache.org/">
-                            <img src="img/spark.png" class="img-responsive img-centered" alt="Spark Logo">
+                        <a class ="vertical-center" href="http://spark.apache.org/">
+                            <img style="margin-top: 15px;" src="img/spark.png" class="img-responsive img-centered" alt="Spark Logo">
                         </a>
                     </div>
                     <div class="col-md-2 col-sm-6">
-                        <a href="https://hadoop.apache.org/">
-                            <img src="img/hadoop.png" class="img-responsive img-centered" alt="Hadoop Logo">
+                        <a class ="vertical-center" href="https://hadoop.apache.org/">
+                            <img  src="img/hadoop.png" class=" media-object img-responsive img-centered" alt="Hadoop Logo" >
                         </a>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <a href="http://cassandra.apache.org/">
-                            <img src="img/cassandra.png" class="img-responsive img-centered" alt="Cassandra Logo">
+                        <a class ="vertical-center" href="http://cassandra.apache.org/">
+                            <img src="img/cassandra.png" class="media-object img-responsive img-centered" alt="Cassandra Logo" >
                         </a>
                     </div>
                 </div>
@@ -66,19 +66,29 @@ layout: default
     <section id="whatisquasar">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-md-12 text-center">
                     <h2 class="section-heading">What is Quasar?</h2>
                 </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-10 text-center">
+                    <p class="first-description">Running analytics on NoSQL data can be slow, inefficient and cumbersome.</p>
+                </div>
+                <div class="col-md-10 col-md-offset-2 text-center">
+                    <p class="text-center second-description">Quasar is the leading analytical interface to multi-structured data <br>and the only general-purpose NoSQL analytics system in existence.</p>
+                </div>
+
+            </div>
+            <div class="row">
                 <div class="text-center">
                     <p class="section-subheading">Run SQL-based analytics on unstructured data.</p>
                 </div>
             </div>
             <div class="row text-center">
-               <img src="img/workflow-graphic.png" class="img-responsive img-centered" alt="Workflow Graphic">
+               <img src="img/workflow-graphic.png" id="worflow-graphic" class="img-responsive img-centered" alt="Workflow Graphic">
             </div>
-            <div class="row">
-                &nbsp;
-            </div>
+            
             <div class="row">
                 <div class="text-center">
                     <p class="section-subheading">Speed up your workflow. <br> One line of SQL can save you 200+ lines of code.</p>
@@ -89,28 +99,20 @@ layout: default
             </div>
         </div>
     </section> <!-- End of What is Quasar -->
-    <!-- White Paper Aside -->
-    <div class="whitepaperaside">
-        <aside class="whitepaper">
+    <!-- Tweeter Aside -->
+    <div class="tweeteraside">
+        <aside class="tweet">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-sm-12">
-                        <h3>How to choose a NoSQL Analytics System</h3>
-                        <p class="whitepaper-paragraph">Whitepaper by Jhon D. Goes, Founder of <a href="http://www.slamdata.com/"><u>SlamData.</u></a> </p>
+                    <div class="col-md-2 col-sm-12">
+                        <h3 class="verticaltext">User Tweets</h3>
                     </div>
-                    <div class="col-md-6 col-sm-6">
-                        <form class="form-inline">
-                            <div class="input-group input-group-lg col-md-12">
-                                <input type="text" class="form-control" id="email" placeholder="email">
-                                <span class="input-group-btn">
-                                    <button type="submit" class="btn btn-primary">Download</button>
-                                </span>
-                                
-                            </div>
-                            
-                        </form>
+                    <div class="col-md-5 col-sm-6">
+                        <p class="tweet-paragraph">"Loving mongoDB even more with new native analytics tools" -User X</p>
                     </div>
-                 
+                    <div class="col-md-5 col-sm-6">
+                        <p class="tweet-paragraph">"Loving mongoDB even more with new native analytics tools" -User X</p>
+                    </div>
                 </div>
             </div> <!-- End container -->
         </aside>
@@ -120,9 +122,50 @@ layout: default
     <section id="whyquasar">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-md-12 text-center">
                     <h2 class="section-heading">Why Quasar?</h2>
                 </div>
+                 <div class="col-md-12 text-center">
+                    <p class="section-subheading">Quasar is the only noSQL analytics system that satifies all 8 essential characteristics. <a href=""><u>Read more</u> <i class="fa fa-long-arrow-right"></i></a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-11 col-md-offset-2">
+                    <div class="col-md-1 custom-col">
+                        <img class="img-responsive img-centered" src="img/generic-data-model.png" height="59px" width="52px">
+                        <p class="icon-decription text-center">Isomorphic Data Model</p>
+                    </div>
+                    <div class="col-md-1">
+                        <img class="img-responsive img-centered" src="img/isomorphic-data.png" height="65px" width="63px">
+                        <p class="icon-decription text-center">Generic Data Model</p>
+                    </div>
+
+                    <div class="col-md-1">
+                        <img class="img-responsive img-centered" src="img/multi-dimen.png" height="72px" width="63px">
+                        <p class="icon-decription text-center">Multi Dimensionality</p>
+                    </div>
+                    <div class="col-md-1">
+                        <img class="img-responsive img-centered" src="img/unified-schema.png" height="57px" width="63px">
+                        <p class="icon-decription text-center">Unified Schema</p>
+                    </div>
+                    <div class="col-md-1">
+                        <img class="img-responsive img-centered" src="img/post-relational.png" height="60px" width="55px">
+                        <p class="icon-decription text-center">Post-Relational</p>
+                    </div>
+                    <div class="col-md-1">
+                        <img class="img-responsive img-centered" src="img/polymorphic.png" height="66px" width="49px">
+                        <p class="icon-decription text-center">Polymorphic Queries</p>
+                    </div>
+                    <div class="col-md-1">
+                        <img class="img-responsive img-centered" src="img/dynamic-type.png" height="70px" width="89px">
+                        <p class="icon-decription text-center">Dynamic Type</p>
+                    </div>
+                    <div class="col-md-1">
+                        <img class="img-responsive img-centered" src="img/structural.png" height="52px" width="90px">
+                        <p class="icon-decription text-center">Structural Patterns</p>
+                    </div>
+                </div>
+
             </div>
             <div class="row center-block">
                    
