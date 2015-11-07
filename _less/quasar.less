@@ -369,25 +369,28 @@ section {
 // What is Quasar Section
 
 #whatisquasar{
-    background-image: url('../img/background2.png');
-    background-repeat: none;
-    background-attachment: scroll;
-    background-position: center center;
-    .background-cover;
+    background-color: #161B2E;
+    background-image:
+    radial-gradient(
+    circle at bottom right,
+    #584646 50%
+    );
 }
 
 #worflow-graphic{
+    margin-top: auto;
     margin-bottom: 125px;
 }
 
 // Why Quasar Section
 
 #whyquasar{
-    background-image: url('../img/background3.png');
-    background-repeat: none;
-    background-attachment: scroll;
-    background-position: center center;
-    .background-cover;
+    background-color: #0B1139;
+    background-image:
+    radial-gradient(
+    circle at bottom right,
+    #455057 50%
+    );  
 }
 
 .section-paragraph{
@@ -420,14 +423,16 @@ section {
     text-transform: uppercase;
     .pn_rg-font();
 }
+
 // Join us Section
 
 #joinus{
-    background-image: url('../img/background4.png');
-    background-repeat: none;
-    background-attachment: scroll;
-    background-position: center center;
-    .background-cover;
+    background-color: #112D37;
+    background-image:
+    radial-gradient(
+    circle at bottom right,
+    #18556A 50%
+    );
 }
 
 .section-subheading{
@@ -461,6 +466,10 @@ section {
     padding-bottom: 45px;  
 }
 
+#bottom-buttons{
+    margin-top: 119px;
+    margin-bottom: 67px;
+}
 
 // Portfolio Section
 
@@ -739,16 +748,17 @@ section {
 
 //Aside Styles
 
-.verticaltext {
-    
-    transform: rotate(-20deg);
-    transform-origin: right, top;
-    -ms-transform: rotate(-20deg);
-    -ms-transform-origin:right, top;
-    -webkit-transform: rotate(-20deg);
-    -webkit-transform-origin:right, top;
+@media(min-width: 768px){
+    .verticaltext {
+        
+        transform: rotate(-20deg);
+        transform-origin: right, top;
+        -ms-transform: rotate(-20deg);
+        -ms-transform-origin:right, top;
+        -webkit-transform: rotate(-20deg);
+        -webkit-transform-origin:right, top;
+    }
 }
-
 // Supports Aside
 
 aside.supports {
@@ -832,6 +842,9 @@ aside.featured {
     .pn_light-font();
     font-size: 15px !important;
     line-height: 30px;
+}
+#infoworld-logo{
+    margin-top: 40px;
 }
 
 //Tweeter Aside 
