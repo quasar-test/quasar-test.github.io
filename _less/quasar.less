@@ -102,7 +102,9 @@ h1, h2, h3, h4, h5, h6 {
 	.button-variant(white; @button-fill; @button-border);
 	.pn_condensed_rg-font;
     font-size: 15px;
+    letter-spacing: 1.33px;
     text-transform: uppercase;
+    padding: 10px 20px;
     &:hover{
         .button-variant(black; white; @button-border);
     }
@@ -138,9 +140,11 @@ h1, h2, h3, h4, h5, h6 {
         	color: darken(@brand-primary, 10%);
         }
 	}
+
 	.navbar-collapse {
 		border-color: fade(white, 2%);
 	}
+
 	.navbar-toggle {
 		background-color: @navbar-background;
 		border-color: @navbar-background;
@@ -184,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media(min-width:768px) {
     .navbar-default {
-    	background-color: @navbar-background;
+    	background-color: rgb(0,0,0,0.5);
         padding: 15px 0;
         -webkit-transition: padding 0.3s;
         -moz-transition: padding 0.3s;
@@ -201,7 +205,6 @@ h1, h2, h3, h4, h5, h6 {
 		}
     }
     .navbar-default.navbar-shrink {
-    	background-color: @gray-darkest;
         padding: 10px 0;
 		.navbar-brand {
 	        font-size: 1.5em;
@@ -210,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-//Custom Navigation Bar for Doc
+//Custom Navigation Bar for Docs Page
 .navbar-inverse {
     border-color: transparent;
 
@@ -333,7 +336,7 @@ header {
             .intro-heading-light {
             .pn_light-font();
             font-size: 23px;
-            margin-bottom: 25px;
+            margin-bottom: 35px;
         }
 		}
 	}
@@ -345,6 +348,7 @@ section {
     padding: 100px 0;
     h2.section-heading {
         .nasalization-font();
+        letter-spacing: 2px;
 	    font-size: 34px;
 		margin-top: 0;
 		margin-bottom: 48px;
@@ -369,35 +373,126 @@ section {
 // What is Quasar Section
 
 #whatisquasar{
-    background-color: #161B2E;
-    background-image:
-    radial-gradient(
-    circle at bottom right,
-    #584646 50%
-    );
+/*    background-color: #161B2E;*/
+    background-color: transparent;
+/*    background-image: -webkit-gradient(linear, center top, center bottom, color-stop(0, #161B2E), color-stop(0.5, #ff0000));
+    background-image: -webkit-linear-gradient(270deg, #00ff00, #ff0000);
+    background-image: -o-linear-gradient(270deg, #00ff00, #ff0000);
+    background-image: -moz-linear-gradient(270deg, #00ff00, #ff0000);*/
+    background-image: linear-gradient(135deg, #161B2E, #584646);
 }
 
-#worflow-graphic{
+#workflow-graphic{
     margin-top: auto;
     margin-bottom: 125px;
 }
 
+#example-query{
+    max-width: 50%;
+}
+
+@media(max-width:768px) {
+    .intro-heading-light {
+        margin-bottom: 2em;
+    }
+    .center-block{
+        margin-bottom: 5%;
+    }
+    .intro-lead-in{
+        margin-top: 10%;
+    }
+    .vertical-center{
+        margin-bottom: 1em;
+    }
+}
+
 // Why Quasar Section
 
+.features-list{
+    height: 700px !important;
+    margin-top:5% !important;
+}
+
+#eight-icons{
+    margin-bottom: 3em;
+}
+
+.center-icons{
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important;
+}
+
+.img-centered-1{
+    position: relative;
+    float: left;
+    margin-left: 1.3em;
+    margin-right: 1.3em;
+    width:  120px;
+    height: 130px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+.img-centered-2{
+    position: relative;
+    float: left;
+    margin-left: 1.3em;
+    margin-right: 1.3em;
+    width:  90px;
+    height: 130px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+.img-centered-3{
+    position: relative;
+    float: left;
+    margin-left: 1.3em;
+    margin-right: 1.3em;
+    width:  100px;
+    height: 130px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+.img-centered-4{
+    position: relative;
+    float: left;
+    margin-left: 1.3em;
+    margin-right: 1.3em;
+    width:  75px;
+    height: 130px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+.img-centered-5{
+    position: relative;
+    float: left;
+    margin-left: 1.3em;
+    margin-right: 1.3em;
+    width:  105px;
+    height: 130px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
 #whyquasar{
-    background-color: #0B1139;
-    background-image:
-    radial-gradient(
-    circle at bottom right,
-    #455057 50%
-    );  
+    background-color: transparent;
+    background-image: linear-gradient(135deg, #0B1139, #455057);
 }
 
 .section-paragraph{
     color: white;
     .pn_light-font();
     font-size: 15px !important;
-    line-height: 20px;
+    line-height: 2;
 }
 
 .first-description{
@@ -449,21 +544,134 @@ section {
     margin-bottom: 30px;
 }
 
-// Join us Section
+@media(min-width:768px) and (max-width: 992px) {
+    .features-list{
+        height: auto !important;
+    }
+    #fast-optimization-pic{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 30%;
+        margin-right: 30%;
+        min-width: 40%;
+        max-width: 40%;
+        height: auto;
+    }
+    #move-computation-pic{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 30%;
+        margin-right: 30%;
+        min-width: 40%;
+        max-width: 40%;
+        height: auto;
+    }
+    #next-gen-bi-pic{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 30%;
+        margin-right: 30%;
+        min-width: 40%;
+        max-width: 40%;
+        height: auto;
+    }
+    .img-centered-1{
+        margin-bottom: 2em;
+        margin-left: 3em;
+    }
+    .img-centered-2{
+        margin-bottom: 2em;
+        margin-left: 3em;
+    }
+    .img-centered-3{
+        margin-bottom: 2em;
+        margin-left: 3em;
+    }
+    .img-centered-4{
+        margin-bottom: 2em;
+        margin-left: 3em;
+    }
+    .img-centered-5{
+        margin-bottom: 2em;
+        margin-left: 3em;
+    }
+}
+
+@media(max-width:768px) {
+    #workflow-graphic {
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+        max-width: 90%;
+    }
+    #example-query{
+        max-width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .img-centered-1{
+        margin-bottom: 2em;
+        margin-left: 3em;
+    }
+    .img-centered-2{
+        margin-bottom: 2em;
+        margin-left: 3em;
+    }
+    .img-centered-3{
+        margin-bottom: 2em;
+        margin-left: 3em;
+    }
+    .img-centered-4{
+        margin-bottom: 2em;
+        margin-left: 3em;
+    }
+    .img-centered-5{
+        margin-bottom: 2em;
+        margin-left: 3em;
+    }
+    #fast-optimization-pic{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 30%;
+        margin-right: 30%;
+        min-width: 40%;
+        max-width: 40%;
+        height: auto;
+    }
+    #move-computation-pic{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 30%;
+        margin-right: 30%;
+        min-width: 40%;
+        max-width: 40%;
+        height: auto;
+    }
+    #next-gen-bi-pic{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 30%;
+        margin-right: 30%;
+        min-width: 40%;
+        max-width: 40%;
+        height: auto;
+    }
+    .features-list{
+        height: auto !important;
+    }
+}
+
+// Contribute Section
 
 #joinus{
-    background-color: #112D37;
-    background-image:
-    radial-gradient(
-    circle at bottom right,
-    #18556A 50%
-    );
+    background-color: transparent;
+    background-image: linear-gradient(135deg, #102B35, #18556A, #102B35);
 }
 
 .section-subheading{
     color: white;
     .pn_rg-font();
     font-size: 23px !important;
+    margin-bottom: 0px !important;
 }
 
 //With margin bottom
@@ -471,7 +679,7 @@ section {
     color: white;
     .pn_rg-font();
     font-size: 23px !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 2em !important;
 }
 
 //Has extra margin bottom, more than section-subheading-2
@@ -491,15 +699,9 @@ section {
 .section-title{
     .pn_semibold-font();
      font-size: 23px;
-     margin: 10px auto 44px;
+     margin: 10px auto;
      color:@special-gray;
      text-transfomr: uppercase;
-     text-decoration: underline;
-}
-.commit-date{
-    color: @white-darker;
-    .pn_light-font();
-    font-size: 15px !important;
 }
 
 .extra-margin{
@@ -510,6 +712,20 @@ section {
 #bottom-buttons{
     margin-top: 119px;
     margin-bottom: 67px;
+}
+
+@media(max-width:768px) {
+    #gitter-logo{
+        margin-bottom: 1em;
+    }
+    #jira-logo{
+        margin-bottom: 1em;
+    }
+    .responsive-center{
+        margin-left: auto;
+        margin-right: auto;
+        float: none !important;
+    }
 }
 
 // Portfolio Section
@@ -791,7 +1007,6 @@ section {
 
 @media(min-width: 768px){
     .verticaltext {
-        
         transform: rotate(-20deg);
         transform-origin: right, top;
         -ms-transform: rotate(-20deg);
@@ -800,10 +1015,23 @@ section {
         -webkit-transform-origin:right, top;
     }
 }
+
+@media(max-width: 992px){
+    .verticaltext {
+        margin-bottom: 5% !important;
+        transform: rotate(0deg);
+        transform-origin: right, top;
+        -ms-transform: rotate(0deg);
+        -ms-transform-origin:right, top;
+        -webkit-transform: rotate(0deg);
+        -webkit-transform-origin:right, top;
+    }
+}
+
 // Supports Aside
 
 aside.supports {
-    background-color: @aside-background;
+    background-color: rgba(20,80,98,.75);
     h3 {
      .pn_semibold-font();
      font-size: 23px;
@@ -813,6 +1041,22 @@ aside.supports {
 	img {
 		margin: 30px auto auto;
 	}
+}
+
+@media(max-width: 768px){
+    .supports {
+        padding-bottom: 10%;
+    }
+}
+
+.logo{
+    max-height: 50px;
+    position: relative;
+    top: 50%;
+}
+
+#sparklogo{
+    margin-top: 15% !important;
 }
 
 // White Paper Aside
@@ -855,7 +1099,7 @@ aside.whitepaper {
 
 //Featured in Aside 
 .featuredinaside { 
-    background-color: @aside-dark-background;
+    background-color: @aside-background;
     //background-image: url('../img/background3_small.png');
     //background-repeat: none;
     //background-attachment: scroll;
@@ -888,14 +1132,25 @@ aside.featured {
     margin-top: 40px;
 }
 
+@media(max-width: 768px){
+    #infoworld-logo{
+        margin-bottom: 2em;
+    }
+    .featured{
+        padding-bottom: 5%;
+    }
+}
+
 //Tweeter Aside 
+
 .tweeteraside { 
-    background-color: @aside-dark-background;
+    background-color: @aside-background !important;
 }
 
 aside.tweet {
     
-    
+    padding-top: 1em;
+    padding-bottom: 1em;
     h3 {
      .pn_semibold-font();
      font-size: 23px;

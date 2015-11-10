@@ -9,6 +9,8 @@ url: "http://quasar-test.github.io/" # the base hostname & protocol for your sit
 twitter_username: quasar
 github_username: quasar-analytics
 
+# LESS compiling
+gems: ['jekyll-less']
 
 collections:
   docs:
