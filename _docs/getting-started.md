@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Getting Started
-permalink: /docs/getting-started/
+title: SQL² Tutorial
+permalink: /docs/sqltutorial/
 docs_navbar: true
 ---
 

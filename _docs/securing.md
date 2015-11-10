@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Contributing
-permalink: /docs/contribute/
+title: Securing Quasar Guide
+permalink: /docs/securing/
 docs_navbar: true
 ---
 
@@ -23,8 +23,7 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non pr
 
 <div class="alert alert-warning">
  <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Sensitive data
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-<p>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
 </div>
 
